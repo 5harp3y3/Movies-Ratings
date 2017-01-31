@@ -26,7 +26,7 @@ def get_filenames():
     except Exception as e:
         error = str(e) + '\n\b' + 'Try Again !!!'
         print(error)
-    file.close()
+    ## file.close()
     print("Total number of files: %d" % no_of_files)
 
     # Search omdb database
