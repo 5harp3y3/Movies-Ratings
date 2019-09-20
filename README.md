@@ -1,10 +1,10 @@
-## Movies-Ratings
+# Movies-Ratings
 Movie Database Interface. Based on the API from http://www.omdbapi.com/ and the python module omdb
 
-## Requirements
+### Requirements
 Python module: omdb 
 
-# Status: Work in progress.
+#### Status: Work in progress.
 
 ### Description:
 
