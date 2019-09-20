@@ -2,9 +2,8 @@ import omdb
 import os
 import ast
 
-# open file for testing
-# os.chdir('')
-# file = open('test.doc', 'w') # For Test purpose
+API_KEY = '' # Get your API KEY from http://www.omdbapi.com/
+omdb.set_default('apikey', API_KEY)
 
 # Omit these words from filenames
 RESERVED = ['Mastered', 'Extended', 'p', 'AAC', 'UnRated', 'Dual Audio', \
@@ -40,7 +39,7 @@ def get_filenames():
             try:
 
                 for lists in range(len(movies)):
-                    names = movies[lists].title
+                    names = movies[lists]['title']
                     binary_obj = omdb.request(t=names)
                     decode = binary_obj.content.decode()
                     json = ast.literal_eval(decode)
