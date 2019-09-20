@@ -10,7 +10,7 @@ RESERVED = ['Mastered', 'Extended', 'p', 'AAC', 'UnRated', 'Dual Audio', \
             'Dual', 'Audio', 'EngHindisbaz', '', 'BRRip', 'AACPRiSTiNE', \
             'repack', 'DVD', 'webrip', 'DVDRip', 'DVDSCR', 'Unrated', \
             'BluRay', 'avi', 'XviD', 'HDRip', 'DvDrip', 'Dvdrip', 'BrRip', \
-            'mkv', 'Series', 'Trilogy']
+            'mkv', 'Series', 'Trilogy', 'YTS']
 
 def get_filenames():
     files = input('Please enter path of directory: ')
@@ -18,8 +18,6 @@ def get_filenames():
     try:
         print("Please wait...Working on it!!!")
         for no_of_files, filenames in enumerate(os.listdir(files)):
-            # file.write(str(no_of_files) + '.' + ' ' + clean(filenames)+ '\n') # For writing to a file
-            # print("%d. %s" %(no_of_files, clean(filenames)))
             tmp.append(clean(filenames))
 
     except Exception as e:
@@ -82,5 +80,3 @@ def clean(filename = ''):
     return ''.join(tmp).rstrip(' ').lstrip()
 
 get_filenames()
-
-# print(clean('12 Angry Men 1957 720p')) # Test purposes
